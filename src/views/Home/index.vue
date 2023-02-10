@@ -1,20 +1,23 @@
-<template>
-  <div></div>
-</template>
-
-<script setup>
+<script setup lang="ts">
 import { onMounted } from "vue";
 import HttpService from "@/core/services/HttpService";
+import InputCustom from "@/components/Input/InputCustom.vue";
 
 const service = new HttpService();
 
 onMounted(async () => {
   try {
-    // const teste = await service.getPokemonList("eevee");
+    // logica inserida aqui
   } catch (erro) {
     console.log("Ocorreu Um Erro");
   }
 });
 </script>
+
+<template>
+  <div>
+    <InputCustom />
+  </div>
+</template>
 
 <style lang="scss" scoped></style>
