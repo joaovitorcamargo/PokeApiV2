@@ -1,0 +1,36 @@
+.isLargeScreen {
+  display: flex;
+}
+.isSmallScreen {
+  display: none;
+}
+.home-pokedex {
+  position: relative;
+  padding-top: 4rem;
+  display: grid;
+  column-gap: 40px;
+  grid-template-columns: 2fr 1fr;
+  height: 100vh;
+}
+.list-pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+@media only screen and (max-width: 600px) {
+  .list-pokemon {
+    align-items: unset;
+  }
+}
+@media only screen and (max-width: 1240px) {
+  .isLargeScreen {
+    display: none;
+  }
+  .isSmallScreen {
+    display: flex;
+  }
+  .home-pokedex {
+    grid-template-columns: 1fr;
+  }
+}
