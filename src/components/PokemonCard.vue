@@ -7,7 +7,10 @@
       :class="`${pokemon.types[0].type.name}`"
       @click.prevent="setCurrentPokemon(index)"
     >
-      <img :src="pokemon.sprites.front_default" alt="" />
+      <img
+        :src="pokemon.sprites.other['official-artwork'].front_default"
+        alt=""
+      />
       <span class="pokemon-id"> # {{ pokemon.id }}</span>
       <span class="pokemon-name">{{ pokemon.name }}</span>
     </div>
@@ -26,4 +29,5 @@ function setCurrentPokemon(index: number) {
 
 <style scoped>
 @import url("./assets/style/PokemonCard.css");
+@import url("./assets/style/TypePokemonsColor.css");
 </style>

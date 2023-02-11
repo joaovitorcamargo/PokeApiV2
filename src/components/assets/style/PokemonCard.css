@@ -20,7 +20,8 @@
 }
 
 .card > img {
-  width: 150px;
+  margin-top: 1.5rem;
+  width: 90px;
   height: auto;
 }
 .pokemon-id{
@@ -37,7 +38,6 @@
 
 .card {
   color: #fff;
-  font-family: sans-serif;
   font-size: 1.5rem;
 }
 
@@ -54,59 +54,4 @@
   .card {
     width: 100%;
   }
-}
-
-.grass {
-  background-color: #9bcc50;
-}
-.bug {
-  background-color: #729f3f;
-}
-.dragon {
-  background-color: coral;
-}
-.normal {
-  background-color: #a4acaf;
-}
-.flying {
-  background-color: #3dc7ef;
-}
-.ground {
-  background-color: #ab9842;
-}
-.dark {
-  background-color: #707070;
-}
-.rock {
-  background-color: #a38c21;
-}
-.ghost {
-  background-color: #7b62a3;
-}
-.ice {
-  background-color: #52c5e8;
-}
-.steel {
-  background-color: #9fb8b9;
-}
-.fighting {
-  background-color: #d56723;
-}
-.psychic {
-  background-color: #f366b9;
-}
-.electric {
-  background-color: #efd636;
-}
-.fire {
-  background-color: #fd7d24;
-}
-.fairy {
-  background-color: #febaea;
-}
-.water {
-  background-color: #4592c4;
-}
-.poison {
-  background-color: #b97fc9;
 }

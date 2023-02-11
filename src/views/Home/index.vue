@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import SearchPokemon from "./components/SearchPokemon.vue";
-import PokemonCard from "./components/PokemonCard.vue";
-import PokemonInfo from "./components/PokemonInfo.vue";
+import SearchPokemon from "@/components/SearchPokemon.vue";
+import PokemonCard from "@/components/PokemonCard.vue";
+import PokemonInfo from "@/components/PokemonInfo.vue";
 </script>
 
 <template>
