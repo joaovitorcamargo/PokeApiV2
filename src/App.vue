@@ -16,4 +16,11 @@
   padding-left: 80px;
   padding-right: 80px;
 }
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 </style>

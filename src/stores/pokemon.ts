@@ -10,6 +10,7 @@ export const pokemonStore = defineStore({
   state: () => ({
     pokemons: [] as Array<any>,
     currentPokemon: {} as any,
+    openModal: false as boolean,
   }),
   actions: {
     async actionsPokemonList(name: string) {
@@ -25,10 +26,15 @@ export const pokemonStore = defineStore({
     },
     async setCurrentPokemon(pokemon: {}) {
       this.currentPokemon = pokemon;
+      this.openModal = true;
+    },
+    closeModal() {
+      this.openModal = false;
     },
   },
   getters: {
     getPokemons: (state) => state.pokemons,
     getCurrentPokemon: (state) => state.currentPokemon,
+    getOpenModal: (state) => state.openModal,
   },
 });

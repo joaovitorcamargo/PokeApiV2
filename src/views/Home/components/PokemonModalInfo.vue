@@ -14,7 +14,8 @@ const currentPokemon = computed(() => {
 </script>
 
 <template>
-  <div class="pokemon-info">
+  <div class="pokemon-info modal">
+    <span class="close" @click.prevent="storePokemons.closeModal()">X</span>
     <div
       v-if="storePokemons.getCurrentPokemon?.sprites"
       class="pokemon-info-body"
@@ -47,6 +48,32 @@ const currentPokemon = computed(() => {
 </template>
 
 <style scoped>
-@import url("./assets/style/TypePokemonsColor.css");
+@import url("@/assets/style/globalStyles/TypePokemonsColor.css");
 @import url("./assets/style/PokemonInfo.css");
+.modal {
+  position: absolute;
+  background-color: #fff;
+  z-index: 3;
+  margin-left: auto;
+  margin-right: auto;
+  top: -5%;
+  left: 0;
+  right: 0;
+  height: 100%;
+  text-align: center;
+}
+.close {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  padding: 15px;
+  right: 10px;
+  border-radius: 100%;
+  background-color: #efefef;
+}
+@media only screen and (max-width: 600px) {
+  .modal {
+    width: 100%;
+  }
+}
 </style>

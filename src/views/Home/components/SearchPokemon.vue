@@ -33,7 +33,7 @@ async function getPokemon() {
 <template>
   <div class="search-component-pokemon">
     <InputCustom
-      placeholder="Insira o nome do pokemon"
+      placeholder="Ex.: Pikachu..."
       class="search-input-pokemon"
       v-model="pokemon"
     />

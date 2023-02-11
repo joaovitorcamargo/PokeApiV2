@@ -1,7 +1,11 @@
 <script setup lang="ts">
-import SearchPokemon from "@/components/SearchPokemon.vue";
-import PokemonCard from "@/components/PokemonCard.vue";
-import PokemonInfo from "@/components/PokemonInfo.vue";
+import SearchPokemon from "@/views/Home/components/SearchPokemon.vue";
+import PokemonCard from "@/views/Home/components/PokemonCard.vue";
+import PokemonInfo from "@/views/Home/components/PokemonInfo.vue";
+import PokemonModalInfo from "@/views/Home/components/PokemonModalInfo.vue";
+import { pokemonStore } from "@/stores/pokemon";
+
+const storePokemons = pokemonStore();
 </script>
 
 <template>
@@ -10,12 +14,20 @@ import PokemonInfo from "@/components/PokemonInfo.vue";
       <SearchPokemon />
       <PokemonCard />
     </div>
-    <PokemonInfo />
+    <PokemonInfo class="isLargeScreen" />
+    <PokemonModalInfo class="isSmallScreen" v-if="storePokemons.getOpenModal" />
   </div>
 </template>
 
 <style lang="css" scoped>
+.isLargeScreen {
+  display: flex;
+}
+.isSmallScreen {
+  display: none;
+}
 .home-pokedex {
+  position: relative;
   padding-top: 4rem;
   display: grid;
   column-gap: 40px;
@@ -27,5 +39,21 @@ import PokemonInfo from "@/components/PokemonInfo.vue";
   flex-direction: column;
   align-items: center;
   height: 100%;
+}
+@media only screen and (max-width: 600px) {
+  .list-pokemon {
+    align-items: unset;
+  }
+}
+@media only screen and (max-width: 1240px) {
+  .isLargeScreen {
+    display: none;
+  }
+  .isSmallScreen {
+    display: flex;
+  }
+  .home-pokedex {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

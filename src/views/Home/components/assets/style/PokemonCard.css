@@ -17,6 +17,15 @@
   border-radius: 10px;
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    margin: unset;
+    margin-top: 25px;
+  }
 }
 
 .card > img {
@@ -36,10 +45,6 @@
   top: 75%;
 }
 
-.card {
-  color: #fff;
-  font-size: 1.5rem;
-}
 
 @media only screen and (max-width: 1414px) {
   .pokemons {
@@ -48,8 +53,16 @@
 }
 @media only screen and (max-width: 1020px) {
   .pokemons {
-    width: 100%;
+    width: 90%;
     grid-template-columns: 1fr;
+  }
+  .card {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 590px) {
+  .pokemons {
+    width: 100%;
   }
   .card {
     width: 100%;

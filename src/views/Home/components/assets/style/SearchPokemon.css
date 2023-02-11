@@ -41,6 +41,11 @@
 
 @media only screen and (max-width: 1030px) {
   .search-component-pokemon {
+    width: unset;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .search-component-pokemon {
     width: 90%;
   }
 }

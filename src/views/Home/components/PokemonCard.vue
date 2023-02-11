@@ -29,5 +29,5 @@ function setCurrentPokemon(index: number) {
 
 <style scoped>
 @import url("./assets/style/PokemonCard.css");
-@import url("./assets/style/TypePokemonsColor.css");
+@import url("@/assets/style/globalStyles/TypePokemonsColor.css");
 </style>
