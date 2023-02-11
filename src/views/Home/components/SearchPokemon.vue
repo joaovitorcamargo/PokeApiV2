@@ -36,6 +36,7 @@ async function getPokemon() {
       placeholder="Ex.: Pikachu..."
       class="search-input-pokemon"
       v-model="pokemon"
+      @keyup.enter="getPokemon"
     />
     <button
       class="search-button-pokemon"
