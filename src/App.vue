@@ -1,5 +1,18 @@
 <script setup lang="ts"></script>
 
 <template>
-  <RouterView />
+  <div class="container">
+    <RouterView />
+  </div>
 </template>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+</style>

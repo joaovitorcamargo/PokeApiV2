@@ -14,15 +14,18 @@ class HttpService {
       },
     } = await axios.get(`${this.defaultUrl}/pokemon-species/${name}`);
     const {
-      data: {
-        chain: { evolves_to },
-      },
+      data: { chain },
     } = await this.getEvolutionChainPokemon(url);
-    return evolves_to;
+    return chain;
   }
 
   public async getEvolutionChainPokemon(url: string) {
     return axios.get(url);
+  }
+
+  public async getPokemonByName(name: string) {
+    const { data } = await axios.get(`${this.defaultUrl}/pokemon/${name}`);
+    return data;
   }
 }
 

@@ -1,23 +1,31 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
-import HttpService from "@/core/services/HttpService";
-import InputCustom from "@/components/Input/InputCustom.vue";
-
-const service = new HttpService();
-
-onMounted(async () => {
-  try {
-    // logica inserida aqui
-  } catch (erro) {
-    console.log("Ocorreu Um Erro");
-  }
-});
+import SearchPokemon from "./components/SearchPokemon.vue";
+import PokemonCard from "./components/PokemonCard.vue";
+import PokemonInfo from "./components/PokemonInfo.vue";
 </script>
 
 <template>
-  <div>
-    <InputCustom />
+  <div class="home-pokedex">
+    <div class="list-pokemon">
+      <SearchPokemon />
+      <PokemonCard />
+    </div>
+    <PokemonInfo />
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="css" scoped>
+.home-pokedex {
+  padding-top: 4rem;
+  display: grid;
+  column-gap: 40px;
+  grid-template-columns: 2fr 1fr;
+  height: 100vh;
+}
+.list-pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+</style>

@@ -1,0 +1,46 @@
+.search-component-pokemon {
+  width: 500px;
+  position: relative;
+}
+.search-input-pokemon {
+  width: 100%;
+  border-radius: 10px;
+  height: 20px;
+  padding: 20px;
+  font-size: 1.5rem;
+  color: #7e7f7c;
+  border: none;
+  box-shadow: 10px 10px 23px 3px rgba(0, 0, 0, 0.3);
+}
+.search-button-pokemon {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  border: none;
+  padding: 20px;
+  background-color: transparent;
+  background-size: cover;
+}
+
+.search-button-icon-pokeball {
+  background-image: url("../img/pokeball.png");
+}
+.search-button-icon-pikachu {
+  background-image: url("../img/pikachu.png");
+}
+.search-button-icon-bulbasaur {
+  background-image: url("../img/bulbasaur.png");
+}
+.search-button-icon-squirtle {
+  background-image: url("../img/squirtle.png");
+}
+.search-button-icon-charmander {
+  background-image: url("../img/charmander.png");
+}
+
+@media only screen and (max-width: 1030px) {
+  .search-component-pokemon {
+    width: 90%;
+  }
+}
